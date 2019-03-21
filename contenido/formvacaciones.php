@@ -1,6 +1,7 @@
 <?php
-include('../lib/constantes.php');
 include('../lib/vacaciones.php');
+include('../lib/constantes.php');
+
 
 ?>
 <!DOCTYPE html>
@@ -27,7 +28,7 @@ and open the template in the editor.
             <div id="titulo"></div>
             <div id="menu"><?php include('../menu.php');?></div>
                     <div id="contenido">
-                        <form class="vacaciones form-horizontal" action="../lib/recepcionvacaciones.php" method="get">
+                        <form class="vacaciones form-horizontal" action="../lib/recepcionvacaciones.php" method="post">
                             <div class="form-group"> 
                                 <label class="col-sm-2 control-label">Rut:</label> 
                                 <div class="col-sm-10">
@@ -45,8 +46,22 @@ and open the template in the editor.
         </div>
         <pre>
         <?php
+        echo '<pre>';
         var_dump($_SESSION["regvacacion"]);
+        echo '</pre>';
+        /*
+        foreach ($_SESSION["avacaciones"] as $key => $oVacaciones) {
+            if ($oVacaciones->getRut()=3) {
+                unset($_SESSION["avacaciones"]) as $key => $oVacaciones)
+            }
+        }
+          */      
+        
+        
         ?>
+
+        
+        
         </pre>
     </body>
     
